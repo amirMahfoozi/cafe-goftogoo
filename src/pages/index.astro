@@ -1,0 +1,48 @@
+---
+import CafeFooter from "@/components/CafeFooter.astro";
+import CafeHeader from "@/components/CafeHeader.astro";
+import CategoryNav from "@/components/CategoryNav.astro";
+import HeroImage from "@/components/HeroImage.astro";
+import MenuSection from "@/components/MenuSection.astro";
+import { cafe } from "@/data/cafe";
+import { getItemsByCategory, menuCategories, menuItems } from "@/data/menu";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { assertValidMenu } from "@/utils/menuValidation";
+
+assertValidMenu(menuItems, menuCategories);
+
+const categories = [...menuCategories].sort((a, b) => a.order - b.order);
+const pageTitle = "منوی کافه گفتگو | قهوه، صبحانه و نوشیدنی";
+const pageDescription =
+  "منوی آنلاین کافه گفتگو؛ قهوه، نوشیدنی‌های سرد، شیک، صبحانه، ماکتیل، دمنوش، دسر و غذا.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <CafeHeader cafe={cafe} />
+  <HeroImage cafe={cafe} />
+  <CategoryNav categories={categories} />
+
+  <main id="menu-content">
+    <div class="menu-sections">
+      {
+        categories.map((category) => (
+          <MenuSection
+            category={category}
+            items={getItemsByCategory(category.id)}
+          />
+        ))
+      }
+    </div>
+  </main>
+
+  <CafeFooter cafe={cafe} />
+</BaseLayout>
+
+<style>
+  .menu-sections {
+    display: grid;
+    gap: clamp(3.25rem, 7vw, 5.5rem);
+    padding: clamp(2rem, 4vw, 3.25rem) var(--page-padding)
+      clamp(3.25rem, 6vw, 5rem);
+  }
+</style>

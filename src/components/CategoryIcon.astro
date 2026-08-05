@@ -1,0 +1,34 @@
+---
+import type { CategoryIconName } from "@/types/menu";
+import { assetPath } from "@/utils/assetPath";
+
+interface Props {
+  icon: CategoryIconName;
+  size?: number;
+}
+
+const { icon, size = 38 } = Astro.props;
+---
+
+<img
+  class="category-icon"
+  src={assetPath(`/icons/categories/${icon}.svg`)}
+  width={size}
+  height={size}
+  style={`--icon-size: ${size}px`}
+  alt=""
+  aria-hidden="true"
+  decoding="async"
+/>
+
+<style>
+  .category-icon {
+    display: block;
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+    max-inline-size: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 2px rgb(43 33 24 / 0.1));
+    transition: transform var(--duration-fast) ease;
+  }
+</style>

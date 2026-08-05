@@ -1,0 +1,56 @@
+---
+interface Props {
+  size?: number;
+}
+
+const { size = 56 } = Astro.props;
+---
+
+<span
+  class="logo-mark"
+  role="img"
+  aria-label="نشان موقت کافه گفتگو"
+  title="نشان موقت؛ قابل جایگزینی با لوگوی رسمی"
+  style={`--logo-size: ${size}px`}
+>
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <path d="M22 18c-5-4 5-7 0-12M31 19c-6-5 6-8 0-14"></path>
+    <path d="M13 26h32v10c0 9-7 16-16 16s-16-7-16-16V26Z"></path>
+    <path d="M45 30h3a7 7 0 0 1 0 14h-5"></path>
+    <path d="M20 34h18M19 55h25"></path>
+    <path class="logo-mark__dialogue" d="M24 38c4 3 9 3 13 0"></path>
+  </svg>
+</span>
+
+<style>
+  .logo-mark {
+    display: grid;
+    inline-size: var(--logo-size);
+    block-size: var(--logo-size);
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid
+      color-mix(in srgb, var(--color-secondary) 72%, var(--color-border));
+    border-radius: 50%;
+    color: var(--color-text);
+    background: linear-gradient(
+      145deg,
+      var(--color-surface-soft),
+      var(--color-secondary)
+    );
+  }
+
+  svg {
+    inline-size: 72%;
+    block-size: 72%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .logo-mark__dialogue {
+    stroke: var(--color-primary-dark);
+  }
+</style>

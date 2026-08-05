@@ -1,0 +1,255 @@
+---
+import type { MenuItem } from "@/types/menu";
+import { assetPath } from "@/utils/assetPath";
+import Badge from "./Badge.astro";
+import PriceDisplay from "./PriceDisplay.astro";
+
+interface Props {
+  item: MenuItem;
+}
+
+const { item } = Astro.props;
+const isAvailable = item.available !== false;
+---
+
+<article class:list={["menu-card", { "menu-card--unavailable": !isAvailable }]}>
+  <div class="menu-card__media">
+    <img
+      class="menu-card__image"
+      src={assetPath(item.image)}
+      alt={item.imageAlt}
+      width="1200"
+      height="900"
+      loading="lazy"
+      decoding="async"
+      data-menu-image
+    />
+    {
+      item.badge && (
+        <div class="menu-card__badge">
+          <Badge label={item.badge} />
+        </div>
+      )
+    }
+    {!isAvailable && <span class="menu-card__availability">ناموجود امروز</span>}
+  </div>
+  <div class="menu-card__content">
+    <div class="menu-card__heading">
+      <h3>{item.name}</h3>
+      {
+        item.englishName && (
+          <p lang="en" dir="ltr">
+            {item.englishName}
+          </p>
+        )
+      }
+    </div>
+    {
+      item.description && (
+        <p class="menu-card__description">{item.description}</p>
+      )
+    }
+    <div class="menu-card__footer">
+      <PriceDisplay item={item} />
+      {
+        item.allergens && item.allergens.length > 0 && (
+          <span
+            class="menu-card__allergen"
+            title={`حاوی ${item.allergens.join("، ")}`}
+          >
+            <svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true">
+              <path d="M10 2 2 17h16L10 2Z" />
+              <path d="M10 7v4M10 14v.1" />
+            </svg>
+            <span class="sr-only">حاوی {item.allergens.join("، ")}</span>
+          </span>
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .menu-card {
+    display: flex;
+    min-inline-size: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-surface) 76%, white);
+    box-shadow: var(--shadow-xs);
+    transition:
+      transform var(--duration-fast) ease,
+      box-shadow var(--duration-fast) ease,
+      border-color var(--duration-fast) ease;
+  }
+
+  .menu-card:hover {
+    border-color: color-mix(
+      in srgb,
+      var(--color-primary) 50%,
+      var(--color-border)
+    );
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+  }
+
+  .menu-card__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--color-surface-soft);
+  }
+
+  .menu-card__media::after {
+    position: absolute;
+    inset: auto 0 0;
+    block-size: 24%;
+    background: linear-gradient(to top, rgb(43 33 24 / 0.08), transparent);
+    content: "";
+    pointer-events: none;
+  }
+
+  .menu-card__image {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) ease;
+  }
+
+  .menu-card:hover .menu-card__image {
+    transform: scale(1.018);
+  }
+
+  .menu-card__badge {
+    position: absolute;
+    inset-block-start: var(--space-2);
+    inset-inline-start: var(--space-2);
+  }
+
+  .menu-card__availability {
+    position: absolute;
+    inset: auto var(--space-2) var(--space-2);
+    min-block-size: 28px;
+    padding: 0.22rem 0.55rem;
+    border: 1px solid rgb(43 33 24 / 0.22);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    background: color-mix(in srgb, var(--color-background) 91%, transparent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .menu-card__content {
+    display: flex;
+    min-block-size: 184px;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .menu-card__heading {
+    min-block-size: 52px;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(0.94rem, 4.2vw, 1.05rem);
+    font-weight: 730;
+    line-height: 1.55;
+  }
+
+  .menu-card__heading p {
+    margin: 0.08rem 0 0;
+    overflow: hidden;
+    color: var(--color-text-muted);
+    font-size: 0.63rem;
+    line-height: 1.35;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .menu-card__description {
+    display: -webkit-box;
+    min-block-size: 3.35em;
+    margin: 0.45rem 0 0;
+    overflow: hidden;
+    color: var(--color-text-muted);
+    font-size: clamp(0.72rem, 3.2vw, 0.8rem);
+    line-height: 1.68;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .menu-card__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-block-start: auto;
+    padding-block-start: var(--space-3);
+    border-block-start: 1px solid
+      color-mix(in srgb, var(--color-border) 68%, transparent);
+  }
+
+  .menu-card__allergen {
+    display: grid;
+    inline-size: 28px;
+    block-size: 28px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--color-text-muted);
+    background: var(--color-surface-soft);
+  }
+
+  .menu-card__allergen svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+  }
+
+  .menu-card--unavailable {
+    opacity: 0.72;
+  }
+
+  .menu-card--unavailable .menu-card__image {
+    filter: saturate(0.42);
+  }
+
+  @media (max-width: 349px) {
+    .menu-card__content {
+      min-block-size: auto;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .menu-card {
+      border-radius: var(--radius-xl);
+    }
+
+    .menu-card__content {
+      min-block-size: 196px;
+      padding: 1rem;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+    }
+
+    .menu-card__heading p {
+      font-size: 0.68rem;
+    }
+
+    .menu-card__description {
+      font-size: 0.82rem;
+    }
+  }
+</style>

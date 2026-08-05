@@ -1,0 +1,90 @@
+---
+import { cafe } from "@/data/cafe";
+import { assetPath } from "@/utils/assetPath";
+import "@/styles/tokens.css";
+import "@/styles/reset.css";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalUrl = new URL(
+  Astro.url.pathname,
+  Astro.site ?? Astro.url.origin,
+);
+const ogImageUrl = new URL(assetPath(cafe.heroImage), canonicalUrl.origin);
+
+const structuredData: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  name: cafe.name,
+  description: cafe.description,
+  image: ogImageUrl.href,
+  url: canonicalUrl.href,
+  hasMenu: canonicalUrl.href,
+  servesCuisine: ["قهوه", "صبحانه", "کافه"],
+};
+
+if (cafe.phone) structuredData.telephone = cafe.phone;
+if (cafe.instagramUrl) structuredData.sameAs = [cafe.instagramUrl];
+if (cafe.address) {
+  structuredData.address = {
+    "@type": "PostalAddress",
+    streetAddress: cafe.address,
+    addressCountry: "IR",
+  };
+}
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#FEFAE0" />
+    <meta name="color-scheme" content="light" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={assetPath("/favicon.png")} type="image/png" />
+    <link rel="apple-touch-icon" href={assetPath("/apple-touch-icon.png")} />
+    <link rel="manifest" href={assetPath("/site.webmanifest")} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:site_name" content={cafe.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={cafe.heroImageAlt} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="560" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={cafe.heroImageAlt} />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#menu-content">پرش به منو</a>
+    <div class="site-shell">
+      <slot />
+    </div>
+    <script src="../scripts/image-fallback.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+---
+import ActionIcon from "./ActionIcon.astro";
+
+type ActionIconName = "phone" | "instagram" | "map";
+
+interface Props {
+  label: string;
+  accessibleLabel: string;
+  href?: string | undefined;
+  icon: ActionIconName;
+}
+
+const { label, accessibleLabel, href, icon } = Astro.props;
+const isExternal = href?.startsWith("http") ?? false;
+---
+
+{
+  href ? (
+    <a
+      class="action-button"
+      href={href}
+      aria-label={accessibleLabel}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+    >
+      <ActionIcon icon={icon} />
+      <span>{label}</span>
+    </a>
+  ) : (
+    <span
+      class="action-button action-button--disabled"
+      aria-label={`${accessibleLabel}؛ اطلاعات هنوز ثبت نشده است`}
+      aria-disabled="true"
+      title="پیش از انتشار، اطلاعات رسمی کافه را وارد کنید"
+    >
+      <ActionIcon icon={icon} />
+      <span>{label}</span>
+    </span>
+  )
+}
+
+<style>
+  .action-button {
+    display: flex;
+    min-inline-size: 0;
+    min-block-size: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.42rem;
+    padding: 0.65rem 0.45rem;
+    border: 1px solid
+      color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    background: color-mix(
+      in srgb,
+      var(--color-primary) 34%,
+      var(--color-surface)
+    );
+    font-size: clamp(0.76rem, 3.4vw, 0.9rem);
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      transform var(--duration-fast) ease,
+      background-color var(--duration-fast) ease;
+  }
+
+  .action-button:hover {
+    background: color-mix(
+      in srgb,
+      var(--color-primary) 51%,
+      var(--color-surface)
+    );
+    transform: translateY(-1px);
+  }
+
+  .action-button--disabled {
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+    background: var(--color-surface-soft);
+    cursor: not-allowed;
+  }
+
+  .action-button--disabled:hover {
+    transform: none;
+  }
+</style>

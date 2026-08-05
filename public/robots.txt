@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# The XML sitemap is generated at /sitemap-index.xml during the production build.

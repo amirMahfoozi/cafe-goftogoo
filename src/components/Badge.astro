@@ -1,0 +1,58 @@
+---
+import type { MenuBadge } from "@/types/menu";
+
+interface Props {
+  label: MenuBadge;
+}
+
+const { label } = Astro.props;
+---
+
+<span
+  class:list={[
+    "badge",
+    { "badge--green": label === "گیاهی", "badge--accent": label !== "گیاهی" },
+  ]}
+>
+  {label}
+</span>
+
+<style>
+  .badge {
+    display: inline-flex;
+    inline-size: fit-content;
+    min-block-size: 25px;
+    align-items: center;
+    padding: 0.16rem 0.52rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    background: color-mix(in srgb, var(--color-background) 92%, transparent);
+    font-size: 0.68rem;
+    font-weight: 720;
+    line-height: 1.5;
+  }
+
+  .badge--green {
+    border-color: color-mix(
+      in srgb,
+      var(--color-secondary) 76%,
+      var(--color-border)
+    );
+    background: color-mix(in srgb, var(--color-surface-soft) 92%, transparent);
+  }
+
+  .badge--accent {
+    border-color: color-mix(
+      in srgb,
+      var(--color-primary) 62%,
+      var(--color-border)
+    );
+    color: var(--color-primary-strong);
+    background: color-mix(
+      in srgb,
+      var(--color-primary) 20%,
+      var(--color-background)
+    );
+  }
+</style>

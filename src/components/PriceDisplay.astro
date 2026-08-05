@@ -1,0 +1,81 @@
+---
+import type { MenuItem } from "@/types/menu";
+import { formatPrice } from "@/utils/formatPrice";
+
+interface Props {
+  item: MenuItem;
+}
+
+const { item } = Astro.props;
+---
+
+{
+  typeof item.price === "number" ? (
+    <p class="price">
+      <data value={item.price}>{formatPrice(item.price)}</data>
+      <span class="price__unit">هزار</span>
+    </p>
+  ) : item.variants ? (
+    <dl class="price-variants" aria-label={`قیمت‌های ${item.name}`}>
+      {item.variants.map((variant) => (
+        <div>
+          <dt>{variant.label}</dt>
+          <dd>{formatPrice(variant.price)}</dd>
+        </div>
+      ))}
+    </dl>
+  ) : (
+    <p class="price-note">{item.priceNote}</p>
+  )
+}
+
+<style>
+  .price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin: 0;
+    color: var(--color-primary-strong);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .price__unit {
+    color: var(--color-text-muted);
+    font-size: 0.68em;
+    font-weight: 500;
+  }
+
+  .price-variants {
+    display: grid;
+    gap: 0.3rem;
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  .price-variants > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  .price-variants dt,
+  .price-variants dd {
+    margin: 0;
+  }
+
+  .price-variants dd {
+    color: var(--color-primary-strong);
+    font-weight: 800;
+  }
+
+  .price-note {
+    margin: 0;
+    color: var(--color-primary-strong);
+    font-size: 0.76rem;
+    font-weight: 750;
+    line-height: 1.5;
+  }
+</style>

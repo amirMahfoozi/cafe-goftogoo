@@ -1,0 +1,380 @@
+[
+  {
+    "itemId": "espresso-single",
+    "localPath": "images/menu/coffee/espresso-single.webp",
+    "pexelsId": 29255517,
+    "sourcePage": "https://www.pexels.com/photo/29255517/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "espresso-double",
+    "localPath": "images/menu/coffee/espresso-double.webp",
+    "pexelsId": 38415014,
+    "sourcePage": "https://www.pexels.com/photo/38415014/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "americano",
+    "localPath": "images/menu/coffee/americano.webp",
+    "pexelsId": 28921766,
+    "sourcePage": "https://www.pexels.com/photo/28921766/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "latte",
+    "localPath": "images/menu/coffee/latte.webp",
+    "pexelsId": 32938771,
+    "sourcePage": "https://www.pexels.com/photo/32938771/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "cappuccino",
+    "localPath": "images/menu/coffee/cappuccino.webp",
+    "pexelsId": 30777670,
+    "sourcePage": "https://www.pexels.com/photo/30777670/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "mocha",
+    "localPath": "images/menu/coffee/mocha.webp",
+    "pexelsId": 6006668,
+    "sourcePage": "https://www.pexels.com/photo/6006668/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "caramel-macchiato",
+    "localPath": "images/menu/coffee/caramel-macchiato.webp",
+    "pexelsId": 17557497,
+    "sourcePage": "https://www.pexels.com/photo/17557497/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "hot-chocolate",
+    "localPath": "images/menu/coffee/hot-chocolate.webp",
+    "pexelsId": 36010235,
+    "sourcePage": "https://www.pexels.com/photo/36010235/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "masala",
+    "localPath": "images/menu/coffee/masala.webp",
+    "pexelsId": 32711258,
+    "sourcePage": "https://www.pexels.com/photo/32711258/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "karak",
+    "localPath": "images/menu/coffee/karak.webp",
+    "pexelsId": 20282353,
+    "sourcePage": "https://www.pexels.com/photo/20282353/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "pistachio-latte",
+    "localPath": "images/menu/coffee/pistachio-latte.webp",
+    "pexelsId": 30313264,
+    "sourcePage": "https://www.pexels.com/photo/30313264/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "affogato",
+    "localPath": "images/menu/coffee/affogato.webp",
+    "pexelsId": 9442600,
+    "sourcePage": "https://www.pexels.com/photo/9442600/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "greek-coffee",
+    "localPath": "images/menu/coffee/greek-coffee.webp",
+    "pexelsId": 34217414,
+    "sourcePage": "https://www.pexels.com/photo/34217414/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "turkish-coffee",
+    "localPath": "images/menu/coffee/turkish-coffee.webp",
+    "pexelsId": 11292688,
+    "sourcePage": "https://www.pexels.com/photo/11292688/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "french-coffee",
+    "localPath": "images/menu/coffee/french-coffee.webp",
+    "pexelsId": 2748538,
+    "sourcePage": "https://www.pexels.com/photo/2748538/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "hot-nutella",
+    "localPath": "images/menu/coffee/hot-nutella.webp",
+    "pexelsId": 18863076,
+    "sourcePage": "https://www.pexels.com/photo/18863076/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "matcha",
+    "localPath": "images/menu/coffee/matcha.webp",
+    "pexelsId": 17719788,
+    "sourcePage": "https://www.pexels.com/photo/17719788/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "scrambled-eggs",
+    "localPath": "images/menu/breakfast/scrambled-eggs.webp",
+    "pexelsId": 32695309,
+    "sourcePage": "https://www.pexels.com/photo/32695309/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "iced-latte",
+    "localPath": "images/menu/cold/iced-latte.webp",
+    "pexelsId": 34264494,
+    "sourcePage": "https://www.pexels.com/photo/34264494/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "iced-mocha",
+    "localPath": "images/menu/cold/iced-mocha.webp",
+    "pexelsId": 31320841,
+    "sourcePage": "https://www.pexels.com/photo/31320841/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "iced-caramel-macchiato",
+    "localPath": "images/menu/cold/iced-caramel-macchiato.webp",
+    "pexelsId": 34969154,
+    "sourcePage": "https://www.pexels.com/photo/34969154/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "iced-coffee",
+    "localPath": "images/menu/cold/iced-coffee.webp",
+    "pexelsId": 38519286,
+    "sourcePage": "https://www.pexels.com/photo/38519286/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "iced-americano",
+    "localPath": "images/menu/cold/iced-americano.webp",
+    "pexelsId": 35755395,
+    "sourcePage": "https://www.pexels.com/photo/35755395/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "nutella-shake",
+    "localPath": "images/menu/cold/nutella-shake.webp",
+    "pexelsId": 1562465,
+    "sourcePage": "https://www.pexels.com/photo/1562465/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "super-berry-shake",
+    "localPath": "images/menu/cold/super-berry-shake.webp",
+    "pexelsId": 8805100,
+    "sourcePage": "https://www.pexels.com/photo/8805100/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "peanut-bar-shake",
+    "localPath": "images/menu/cold/peanut-bar-shake.webp",
+    "pexelsId": 12974366,
+    "sourcePage": "https://www.pexels.com/photo/12974366/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "lotus-shake",
+    "localPath": "images/menu/cold/lotus-shake.webp",
+    "pexelsId": 17034200,
+    "sourcePage": "https://www.pexels.com/photo/17034200/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "crunch-shake",
+    "localPath": "images/menu/cold/crunch-shake.webp",
+    "pexelsId": 16825489,
+    "sourcePage": "https://www.pexels.com/photo/16825489/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "extra-syrup-shot",
+    "localPath": "images/menu/cold/extra-syrup-shot.webp",
+    "pexelsId": 8468608,
+    "sourcePage": "https://www.pexels.com/photo/8468608/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "brewed-tea",
+    "localPath": "images/menu/tea/brewed-tea.webp",
+    "pexelsId": 30509105,
+    "sourcePage": "https://www.pexels.com/photo/30509105/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "hibiscus-tea",
+    "localPath": "images/menu/tea/hibiscus-tea.webp",
+    "pexelsId": 220704,
+    "sourcePage": "https://www.pexels.com/photo/220704/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "green-tea",
+    "localPath": "images/menu/tea/green-tea.webp",
+    "pexelsId": 463445,
+    "sourcePage": "https://www.pexels.com/photo/463445/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "sunset-apple-infusion",
+    "localPath": "images/menu/tea/sunset-apple-infusion.webp",
+    "pexelsId": 30103700,
+    "sourcePage": "https://www.pexels.com/photo/30103700/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "golden-calm-infusion",
+    "localPath": "images/menu/tea/golden-calm-infusion.webp",
+    "pexelsId": 29387141,
+    "sourcePage": "https://www.pexels.com/photo/29387141/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "ginger-apple-infusion",
+    "localPath": "images/menu/tea/ginger-apple-infusion.webp",
+    "pexelsId": 16134585,
+    "sourcePage": "https://www.pexels.com/photo/16134585/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "energy-boost-infusion",
+    "localPath": "images/menu/tea/energy-boost-infusion.webp",
+    "pexelsId": 10776408,
+    "sourcePage": "https://www.pexels.com/photo/10776408/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "lemonade",
+    "localPath": "images/menu/mocktail/lemonade.webp",
+    "pexelsId": 16066872,
+    "sourcePage": "https://www.pexels.com/photo/16066872/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "mojito",
+    "localPath": "images/menu/mocktail/mojito.webp",
+    "pexelsId": 8375044,
+    "sourcePage": "https://www.pexels.com/photo/8375044/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "passion-mojito",
+    "localPath": "images/menu/mocktail/passion-mojito.webp",
+    "pexelsId": 8375038,
+    "sourcePage": "https://www.pexels.com/photo/8375038/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "red-mojito",
+    "localPath": "images/menu/mocktail/red-mojito.webp",
+    "pexelsId": 12419173,
+    "sourcePage": "https://www.pexels.com/photo/12419173/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "blue-hawaii",
+    "localPath": "images/menu/mocktail/blue-hawaii.webp",
+    "pexelsId": 12419204,
+    "sourcePage": "https://www.pexels.com/photo/12419204/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "apple-martini",
+    "localPath": "images/menu/mocktail/apple-martini.webp",
+    "pexelsId": 8228301,
+    "sourcePage": "https://www.pexels.com/photo/8228301/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "cuba-libre",
+    "localPath": "images/menu/mocktail/cuba-libre.webp",
+    "pexelsId": 13293872,
+    "sourcePage": "https://www.pexels.com/photo/13293872/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "cherry-smoothie",
+    "localPath": "images/menu/mocktail/cherry-smoothie.webp",
+    "pexelsId": 4214381,
+    "sourcePage": "https://www.pexels.com/photo/4214381/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "mango-smoothie",
+    "localPath": "images/menu/mocktail/mango-smoothie.webp",
+    "pexelsId": 2113915,
+    "sourcePage": "https://www.pexels.com/photo/2113915/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "waffle",
+    "localPath": "images/menu/dessert/waffle.webp",
+    "pexelsId": 14705142,
+    "sourcePage": "https://www.pexels.com/photo/14705142/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "signature-cookie",
+    "localPath": "images/menu/dessert/signature-cookie.webp",
+    "pexelsId": 31116124,
+    "sourcePage": "https://www.pexels.com/photo/31116124/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "signature-ice-cream",
+    "localPath": "images/menu/dessert/signature-ice-cream.webp",
+    "pexelsId": 16015237,
+    "sourcePage": "https://www.pexels.com/photo/16015237/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "chicken-panini",
+    "localPath": "images/menu/food/chicken-panini.webp",
+    "pexelsId": 5337811,
+    "sourcePage": "https://www.pexels.com/photo/5337811/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "bacon-panini",
+    "localPath": "images/menu/food/bacon-panini.webp",
+    "pexelsId": 15951903,
+    "sourcePage": "https://www.pexels.com/photo/15951903/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "golden-fries",
+    "localPath": "images/menu/food/golden-fries.webp",
+    "pexelsId": 33583358,
+    "sourcePage": "https://www.pexels.com/photo/33583358/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "baked-fries",
+    "localPath": "images/menu/food/baked-fries.webp",
+    "pexelsId": 29285462,
+    "sourcePage": "https://www.pexels.com/photo/29285462/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "extra-dip",
+    "localPath": "images/menu/food/extra-dip.webp",
+    "pexelsId": 18354019,
+    "sourcePage": "https://www.pexels.com/photo/18354019/",
+    "license": "https://www.pexels.com/license/"
+  },
+  {
+    "itemId": "crispy-chicken-caesar",
+    "localPath": "images/menu/food/crispy-chicken-caesar.webp",
+    "pexelsId": 28841108,
+    "sourcePage": "https://www.pexels.com/photo/28841108/",
+    "license": "https://www.pexels.com/license/"
+  }
+]

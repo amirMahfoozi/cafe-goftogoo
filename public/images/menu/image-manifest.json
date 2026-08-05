@@ -1,0 +1,276 @@
+{
+  "generatedAt": "2026-08-05",
+  "note": "Optimized local product photographs. Source pages and licenses are recorded in photo-sources.json.",
+  "items": [
+    {
+      "id": "espresso-single",
+      "expectedPath": "/images/menu/coffee/espresso-single.webp",
+      "status": "photo"
+    },
+    {
+      "id": "espresso-double",
+      "expectedPath": "/images/menu/coffee/espresso-double.webp",
+      "status": "photo"
+    },
+    {
+      "id": "americano",
+      "expectedPath": "/images/menu/coffee/americano.webp",
+      "status": "photo"
+    },
+    {
+      "id": "latte",
+      "expectedPath": "/images/menu/coffee/latte.webp",
+      "status": "photo"
+    },
+    {
+      "id": "cappuccino",
+      "expectedPath": "/images/menu/coffee/cappuccino.webp",
+      "status": "photo"
+    },
+    {
+      "id": "mocha",
+      "expectedPath": "/images/menu/coffee/mocha.webp",
+      "status": "photo"
+    },
+    {
+      "id": "caramel-macchiato",
+      "expectedPath": "/images/menu/coffee/caramel-macchiato.webp",
+      "status": "photo"
+    },
+    {
+      "id": "hot-chocolate",
+      "expectedPath": "/images/menu/coffee/hot-chocolate.webp",
+      "status": "photo"
+    },
+    {
+      "id": "masala",
+      "expectedPath": "/images/menu/coffee/masala.webp",
+      "status": "photo"
+    },
+    {
+      "id": "karak",
+      "expectedPath": "/images/menu/coffee/karak.webp",
+      "status": "photo"
+    },
+    {
+      "id": "pistachio-latte",
+      "expectedPath": "/images/menu/coffee/pistachio-latte.webp",
+      "status": "photo"
+    },
+    {
+      "id": "affogato",
+      "expectedPath": "/images/menu/coffee/affogato.webp",
+      "status": "photo"
+    },
+    {
+      "id": "greek-coffee",
+      "expectedPath": "/images/menu/coffee/greek-coffee.webp",
+      "status": "photo"
+    },
+    {
+      "id": "turkish-coffee",
+      "expectedPath": "/images/menu/coffee/turkish-coffee.webp",
+      "status": "photo"
+    },
+    {
+      "id": "french-coffee",
+      "expectedPath": "/images/menu/coffee/french-coffee.webp",
+      "status": "photo"
+    },
+    {
+      "id": "hot-nutella",
+      "expectedPath": "/images/menu/coffee/hot-nutella.webp",
+      "status": "photo"
+    },
+    {
+      "id": "matcha",
+      "expectedPath": "/images/menu/coffee/matcha.webp",
+      "status": "photo"
+    },
+    {
+      "id": "scrambled-eggs",
+      "expectedPath": "/images/menu/breakfast/scrambled-eggs.webp",
+      "status": "photo"
+    },
+    {
+      "id": "iced-latte",
+      "expectedPath": "/images/menu/cold/iced-latte.webp",
+      "status": "photo"
+    },
+    {
+      "id": "iced-mocha",
+      "expectedPath": "/images/menu/cold/iced-mocha.webp",
+      "status": "photo"
+    },
+    {
+      "id": "iced-caramel-macchiato",
+      "expectedPath": "/images/menu/cold/iced-caramel-macchiato.webp",
+      "status": "photo"
+    },
+    {
+      "id": "iced-coffee",
+      "expectedPath": "/images/menu/cold/iced-coffee.webp",
+      "status": "photo"
+    },
+    {
+      "id": "iced-americano",
+      "expectedPath": "/images/menu/cold/iced-americano.webp",
+      "status": "photo"
+    },
+    {
+      "id": "nutella-shake",
+      "expectedPath": "/images/menu/cold/nutella-shake.webp",
+      "status": "photo"
+    },
+    {
+      "id": "super-berry-shake",
+      "expectedPath": "/images/menu/cold/super-berry-shake.webp",
+      "status": "photo"
+    },
+    {
+      "id": "peanut-bar-shake",
+      "expectedPath": "/images/menu/cold/peanut-bar-shake.webp",
+      "status": "photo"
+    },
+    {
+      "id": "lotus-shake",
+      "expectedPath": "/images/menu/cold/lotus-shake.webp",
+      "status": "photo"
+    },
+    {
+      "id": "crunch-shake",
+      "expectedPath": "/images/menu/cold/crunch-shake.webp",
+      "status": "photo"
+    },
+    {
+      "id": "extra-syrup-shot",
+      "expectedPath": "/images/menu/cold/extra-syrup-shot.webp",
+      "status": "photo"
+    },
+    {
+      "id": "brewed-tea",
+      "expectedPath": "/images/menu/tea/brewed-tea.webp",
+      "status": "photo"
+    },
+    {
+      "id": "hibiscus-tea",
+      "expectedPath": "/images/menu/tea/hibiscus-tea.webp",
+      "status": "photo"
+    },
+    {
+      "id": "green-tea",
+      "expectedPath": "/images/menu/tea/green-tea.webp",
+      "status": "photo"
+    },
+    {
+      "id": "sunset-apple-infusion",
+      "expectedPath": "/images/menu/tea/sunset-apple-infusion.webp",
+      "status": "photo"
+    },
+    {
+      "id": "golden-calm-infusion",
+      "expectedPath": "/images/menu/tea/golden-calm-infusion.webp",
+      "status": "photo"
+    },
+    {
+      "id": "ginger-apple-infusion",
+      "expectedPath": "/images/menu/tea/ginger-apple-infusion.webp",
+      "status": "photo"
+    },
+    {
+      "id": "energy-boost-infusion",
+      "expectedPath": "/images/menu/tea/energy-boost-infusion.webp",
+      "status": "photo"
+    },
+    {
+      "id": "lemonade",
+      "expectedPath": "/images/menu/mocktail/lemonade.webp",
+      "status": "photo"
+    },
+    {
+      "id": "mojito",
+      "expectedPath": "/images/menu/mocktail/mojito.webp",
+      "status": "photo"
+    },
+    {
+      "id": "passion-mojito",
+      "expectedPath": "/images/menu/mocktail/passion-mojito.webp",
+      "status": "photo"
+    },
+    {
+      "id": "red-mojito",
+      "expectedPath": "/images/menu/mocktail/red-mojito.webp",
+      "status": "photo"
+    },
+    {
+      "id": "blue-hawaii",
+      "expectedPath": "/images/menu/mocktail/blue-hawaii.webp",
+      "status": "photo"
+    },
+    {
+      "id": "apple-martini",
+      "expectedPath": "/images/menu/mocktail/apple-martini.webp",
+      "status": "photo"
+    },
+    {
+      "id": "cuba-libre",
+      "expectedPath": "/images/menu/mocktail/cuba-libre.webp",
+      "status": "photo"
+    },
+    {
+      "id": "cherry-smoothie",
+      "expectedPath": "/images/menu/mocktail/cherry-smoothie.webp",
+      "status": "photo"
+    },
+    {
+      "id": "mango-smoothie",
+      "expectedPath": "/images/menu/mocktail/mango-smoothie.webp",
+      "status": "photo"
+    },
+    {
+      "id": "waffle",
+      "expectedPath": "/images/menu/dessert/waffle.webp",
+      "status": "photo"
+    },
+    {
+      "id": "signature-cookie",
+      "expectedPath": "/images/menu/dessert/signature-cookie.webp",
+      "status": "photo"
+    },
+    {
+      "id": "signature-ice-cream",
+      "expectedPath": "/images/menu/dessert/signature-ice-cream.webp",
+      "status": "photo"
+    },
+    {
+      "id": "chicken-panini",
+      "expectedPath": "/images/menu/food/chicken-panini.webp",
+      "status": "photo"
+    },
+    {
+      "id": "bacon-panini",
+      "expectedPath": "/images/menu/food/bacon-panini.webp",
+      "status": "photo"
+    },
+    {
+      "id": "golden-fries",
+      "expectedPath": "/images/menu/food/golden-fries.webp",
+      "status": "photo"
+    },
+    {
+      "id": "baked-fries",
+      "expectedPath": "/images/menu/food/baked-fries.webp",
+      "status": "photo"
+    },
+    {
+      "id": "extra-dip",
+      "expectedPath": "/images/menu/food/extra-dip.webp",
+      "status": "photo"
+    },
+    {
+      "id": "crispy-chicken-caesar",
+      "expectedPath": "/images/menu/food/crispy-chicken-caesar.webp",
+      "status": "photo"
+    }
+  ]
+}

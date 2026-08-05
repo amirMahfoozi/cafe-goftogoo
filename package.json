@@ -1,0 +1,39 @@
+{
+  "name": "cafe-goftogoo-menu",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check && npm run test && npm run validate:assets",
+    "build": "npm run validate:assets && astro build",
+    "postbuild": "npm run audit:build",
+    "preview": "node scripts/serve-dist.mjs",
+    "test": "vitest run",
+    "validate:assets": "node --experimental-strip-types --disable-warning=ExperimentalWarning scripts/validate-assets.ts",
+    "audit:build": "node scripts/audit-build.mjs",
+    "download:product-photos": "node scripts/download-product-photos.mjs",
+    "process:cafe-images": "node scripts/process-cafe-images.mjs",
+    "process:brand-assets": "node scripts/process-brand-assets.mjs",
+    "sync:fonts": "node scripts/sync-fonts.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.1.6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@fontsource-variable/estedad": "5.3.0",
+    "@fontsource-variable/vazirmatn": "5.3.0",
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1",
+    "sharp": "0.35.3",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

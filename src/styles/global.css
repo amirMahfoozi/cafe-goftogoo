@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/estedad-variable.woff2") format("woff2-variations");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/vazirmatn-variable.woff2") format("woff2-variations");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+html {
+  min-inline-size: 280px;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: var(--section-scroll-margin);
+  background: var(--color-outer);
+}
+
+body {
+  min-block-size: 100vh;
+  overflow-x: clip;
+  color: var(--color-text);
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgb(254 250 224 / 0.95),
+      transparent 34rem
+    ),
+    var(--color-outer);
+  font-family: var(--font-interface);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: start;
+  text-rendering: optimizeLegibility;
+}
+
+.site-shell {
+  inline-size: min(100%, var(--content-max));
+  min-block-size: 100vh;
+  margin-inline: auto;
+  background: var(--color-background);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  inset-block-start: calc(0.5rem + env(safe-area-inset-top));
+  inset-inline-start: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  color: var(--color-background);
+  background: var(--color-text);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform var(--duration-fast) ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary-strong);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--color-text);
+  background: var(--color-secondary);
+}
+
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding-block: clamp(1rem, 2.5vw, 2.25rem);
+    padding-inline: clamp(1rem, 2.5vw, 2.25rem);
+  }
+
+  .site-shell {
+    min-block-size: calc(100vh - 4.5rem);
+    border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    border-radius: clamp(1.5rem, 3vw, 2.5rem);
+    box-shadow: var(--shadow-shell);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}
+
+@media print {
+  html,
+  body,
+  .site-shell {
+    background: #fff;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .site-shell {
+    inline-size: 100%;
+    max-inline-size: none;
+    border: 0;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,52 @@
+---
+type ActionIconName = "phone" | "instagram" | "map";
+
+interface Props {
+  icon: ActionIconName;
+}
+
+const { icon } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 24 24"
+  width="21"
+  height="21"
+  aria-hidden="true"
+  focusable="false"
+>
+  {
+    icon === "phone" && (
+      <path d="M7.3 3.5 4.6 4.8c-1 .5-1.4 1.6-1.1 2.6 1.8 6.2 6.7 11.1 12.9 12.9 1 .3 2.1-.1 2.6-1.1l1.3-2.7a1.7 1.7 0 0 0-.6-2.1l-3-2a1.7 1.7 0 0 0-2.2.3l-1 1.1a12 12 0 0 1-3.4-3.4l1.1-1a1.7 1.7 0 0 0 .3-2.2l-2-3a1.7 1.7 0 0 0-2.2-.7Z" />
+    )
+  }
+  {
+    icon === "instagram" && (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <path d="M17.5 6.5h.01" />
+      </>
+    )
+  }
+  {
+    icon === "map" && (
+      <>
+        <path d="M20 10c0 5.5-8 11-8 11S4 15.5 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.7" />
+      </>
+    )
+  }
+</svg>
+
+<style>
+  svg {
+    display: block;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>

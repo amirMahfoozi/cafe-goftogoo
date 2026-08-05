@@ -1,0 +1,137 @@
+---
+import type { MenuCategory } from "@/types/menu";
+import CategoryIcon from "./CategoryIcon.astro";
+
+interface Props {
+  categories: readonly MenuCategory[];
+}
+
+const { categories } = Astro.props;
+---
+
+<nav class="category-nav" aria-label="دسته‌بندی‌های منو" data-category-nav>
+  <div class="category-nav__scroller" data-category-scroller>
+    {
+      categories.map((category, index) => (
+        <a
+          class="category-nav__link"
+          href={`#category-${category.id}`}
+          data-category-link={category.id}
+          aria-current={index === 0 ? "true" : undefined}
+        >
+          <CategoryIcon icon={category.icon} />
+          <span>{category.title}</span>
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<script src="../scripts/category-navigation.ts"></script>
+
+<style>
+  .category-nav {
+    position: sticky;
+    z-index: 20;
+    inset-block-start: env(safe-area-inset-top);
+    margin-block-start: var(--space-3);
+    padding-block: 0.55rem;
+    border-block: 1px solid
+      color-mix(in srgb, var(--color-border) 72%, transparent);
+    background: color-mix(in srgb, var(--color-background) 96%, transparent);
+    box-shadow: 0 7px 20px rgb(43 33 24 / 0.06);
+  }
+
+  @supports (backdrop-filter: blur(6px)) {
+    .category-nav {
+      background: color-mix(in srgb, var(--color-background) 91%, transparent);
+      backdrop-filter: blur(6px);
+    }
+  }
+
+  .category-nav__scroller {
+    display: flex;
+    gap: 0.55rem;
+    overflow-x: auto;
+    padding-inline: var(--page-padding);
+    scroll-padding-inline: var(--page-padding);
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline proximity;
+    touch-action: pan-x pan-y;
+    scrollbar-width: none;
+  }
+
+  .category-nav__scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-nav__link {
+    display: grid;
+    min-inline-size: 82px;
+    min-block-size: 76px;
+    flex: 0 0 auto;
+    place-items: center;
+    align-content: center;
+    gap: 0.18rem;
+    padding: 0.4rem 0.65rem 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    color: var(--color-text);
+    background: var(--color-surface-soft);
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    scroll-snap-align: start;
+    transition:
+      color var(--duration-fast) ease,
+      background-color var(--duration-fast) ease,
+      border-color var(--duration-fast) ease,
+      box-shadow var(--duration-fast) ease,
+      transform var(--duration-fast) ease;
+  }
+
+  .category-nav__link[aria-current="true"] {
+    border-color: var(--color-primary-dark);
+    color: var(--color-text);
+    background: var(--color-primary);
+    box-shadow:
+      inset 0 -3px 0 rgb(43 33 24 / 0.14),
+      0 5px 14px rgb(121 71 16 / 0.14);
+  }
+
+  .category-nav__link[aria-current="true"] :global(.category-icon) {
+    transform: translateY(-1px) scale(1.06);
+  }
+
+  .category-nav__link:hover {
+    border-color: color-mix(
+      in srgb,
+      var(--color-primary) 68%,
+      var(--color-border)
+    );
+  }
+
+  .category-nav__link:active {
+    transform: scale(0.98);
+  }
+
+  @media (min-width: 720px) {
+    .category-nav {
+      margin-block-start: var(--space-4);
+      padding-block: 0.7rem;
+    }
+
+    .category-nav__scroller {
+      justify-content: safe center;
+      gap: 0.75rem;
+    }
+
+    .category-nav__link {
+      min-inline-size: 106px;
+      min-block-size: 82px;
+      font-size: 0.85rem;
+    }
+  }
+</style>

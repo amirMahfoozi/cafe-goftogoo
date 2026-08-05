@@ -1,0 +1,100 @@
+---
+import type { CafeInfo } from "@/types/menu";
+import { assetPath } from "@/utils/assetPath";
+import LogoMark from "./LogoMark.astro";
+
+interface Props {
+  cafe: CafeInfo;
+}
+
+const { cafe } = Astro.props;
+---
+
+<header class="cafe-header">
+  <div class="cafe-header__brand">
+    {
+      cafe.logoImage ? (
+        <img
+          class="cafe-header__logo"
+          src={assetPath(cafe.logoImage)}
+          width="512"
+          height="512"
+          alt={`نشان ${cafe.name}`}
+          fetchpriority="high"
+          decoding="async"
+        />
+      ) : (
+        <LogoMark />
+      )
+    }
+    <div class="cafe-header__copy">
+      <p class="cafe-header__name">{cafe.name}</p>
+      <p class="cafe-header__tagline">{cafe.tagline}</p>
+    </div>
+  </div>
+</header>
+
+<style>
+  .cafe-header {
+    padding-block: calc(var(--space-3) + env(safe-area-inset-top))
+      var(--space-3);
+    padding-inline: var(--page-padding);
+  }
+
+  .cafe-header__brand {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 2vw, 1.15rem);
+  }
+
+  .cafe-header__logo {
+    inline-size: clamp(68px, 18vw, 84px);
+    block-size: clamp(68px, 18vw, 84px);
+    flex: 0 0 auto;
+    border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+    border-radius: 28%;
+    background: var(--color-background);
+    object-fit: contain;
+    box-shadow: var(--shadow-xs);
+  }
+
+  .cafe-header__copy {
+    min-inline-size: 0;
+  }
+
+  .cafe-header__name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 7vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+
+  .cafe-header__tagline {
+    margin: 0.2rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 720px) {
+    .cafe-header {
+      padding-block: calc(var(--space-4) + env(safe-area-inset-top))
+        var(--space-4);
+    }
+
+    .cafe-header__logo {
+      inline-size: 92px;
+      block-size: 92px;
+    }
+
+    .cafe-header__name {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+    }
+
+    .cafe-header__tagline {
+      font-size: 1rem;
+    }
+  }
+</style>
